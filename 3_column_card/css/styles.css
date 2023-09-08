@@ -1,0 +1,71 @@
+body {
+    background: hsl(0, 0%, 95%);
+}
+
+h2 {
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 26pt;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 23px;
+}
+
+.cards {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 200px;
+}
+.card { padding: 40px; }
+.card a {
+    font-family: 'Lexend Deca', sans-serif;
+    border: 2px solid hsl(0, 0%, 95%);
+    background: hsl(0, 0%, 95%);
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 11pt;
+    padding: 14px 32px;
+    display: inline-block;
+    margin-top: 60px;
+}
+.card a:hover,
+.card a:focus {
+    background: none;
+    color: hsl(0, 0%, 95%) !important;
+}
+
+.orange { background: hsl(31, 77%, 52%); border-top-left-radius: 7px; border-bottom-left-radius: 7px; }
+.orange a { color:hsl(31, 77%, 52%); }
+.cyan   { background: hsl(184, 100%, 22%); }
+.cyan a { color:hsl(184, 100%, 22%); }
+.dark   { background: hsl(179, 100%, 13%); border-top-right-radius: 7px; border-bottom-right-radius: 7px; }
+.dark a { color:hsl(179, 100%, 13%); }
+
+
+
+.attribution {
+    font-size: 9pt;
+    font-family: 'Lexend Deca', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+    color: #999;
+}
+.attribution a:link,
+.attribution a:visited {
+    color: hsl(184, 100%, 22%);
+    text-decoration: none;
+}
+.attribution a:hover,
+.attribution a:focus {
+    color: hsl(31, 77%, 52%);
+    border-bottom: 1px dotted hsl(31, 77%, 52%);;
+}
