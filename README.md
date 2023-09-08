@@ -1,2 +1,4 @@
 # FrontendMentor
- Challenges from FrontendMentor.io
+Challenges from FrontendMentor.io
+
+Solutions by Stephen "Mr. Fun" Funderburk
