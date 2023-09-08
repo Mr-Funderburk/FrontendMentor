@@ -69,3 +69,10 @@ p {
     color: hsl(31, 77%, 52%);
     border-bottom: 1px dotted hsl(31, 77%, 52%);;
 }
+
+
+@media screen and (max-width: 375px) {
+    .cards { flex-direction: column; margin: 15px; }
+    .orange { border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-left-radius: 0; }
+    .dark   { border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; border-top-right-radius: 0; }
+}
