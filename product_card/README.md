@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL](https://your-solution-url.com)
-- Live Site URL: [Live site URL](https://mr-funderburk.github.io/FrontendMentor/3_column_card/index.html)
+- Live Site URL: [Live site URL](https://mr-funderburk.github.io/FrontendMentor/product_card/index.html)
 
 ## My process
 
