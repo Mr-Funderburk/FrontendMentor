@@ -19,7 +19,7 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ### Links
 
-- Solution URL: [Solution URL](https://your-solution-url.com)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/flexgrid-SAUUwqJMYW)
 - Live Site URL: [Live site URL](https://mr-funderburk.github.io/FrontendMentor/3_column_card/index.html)
 
 ## My process
