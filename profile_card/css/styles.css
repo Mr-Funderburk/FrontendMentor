@@ -1,0 +1,96 @@
+* { margin: 0; padding: 0; }
+
+body {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-align: center;
+    background-color: hsl(185, 75%, 39%);
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 350px;
+    border-radius: 15px;
+    background: #FFF;
+    overflow: hidden;
+    background-image: url("../images/bg-pattern-card.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.headshot {
+    border: 4px solid #FFF;
+    border-radius: 50%;
+    width: 96px;
+    display: block;
+    margin: 95px auto 20px auto;
+    background: #FFF;
+}
+
+h1 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: hsl(229, 23%, 23%);
+}
+
+h1 span { 
+    font-weight: 400;
+    color: hsl(0, 0%, 59%);
+    margin-left: 8px;
+}
+
+.location {
+    color: hsl(0, 0%, 49%);
+    font-size: 0.9rem;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.stats {
+    border-top: 1px solid hsl(0, 0%, 89%);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stat {
+    font-weight: 400;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: hsl(0, 0%, 49%);
+}
+
+.stat strong {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: hsl(229, 23%, 23%);
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+footer {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+    color: hsl(0, 0%, 80%);
+}
+footer a:link,
+footer a:visited {
+    color: hsl(251, 61%, 86%);
+    text-decoration: none;
+}
+footer a:hover,
+footer a:focus {
+    color: hsl(0, 0%, 100%);
+    border-bottom: 1px dotted hsl(0, 0%, 100%);
+}
