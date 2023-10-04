@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://your-solution-url.com)
-- Live Site URL: [Live site URL](https://mr-funderburk.github.io/FrontendMentor/product_card/index.html)
+- Solution URL: [Solution URL](https://github.com/Mr-Funderburk/FrontendMentor/tree/main/nft_preview_card)
+- Live Site URL: [Live site URL](https://mr-funderburk.github.io/FrontendMentor/nft_preview_card/index.html)
 
 ## My process
 
