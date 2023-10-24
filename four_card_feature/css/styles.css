@@ -1,0 +1,96 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+
+body {
+    font-size: 15px;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.container { padding: 30px; }
+
+header {
+    text-align: center;
+    padding-top: 55px;
+    color: hsl(229, 6%, 66%);
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 200;
+    color: hsl(234, 12%, 34%);
+    padding-bottom: 55px;
+}
+
+h1.strong { font-weight: 600; }
+header p { line-height: 1.5rem; }
+
+.cardContainer {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px 0 hsl(0, 0%, 80%);
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+.card {
+    padding: 20px 30px;
+    border-top: 4px solid #f0f;
+}
+
+.card.supervisor { border-color: hsl(180, 62%, 55%); }
+.card.team       { border-color: hsl(0, 78%, 62%); }
+.card.karma      { border-color: hsl(34, 97%, 64%); }
+.card.calculator { border-color: hsl(212, 86%, 64%); }
+
+.card h2 {
+    font-size: 1.3rem;
+    color: hsl(234, 12%, 34%);
+}
+
+.card p {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    color: hsl(229, 6%, 66%);
+    margin: 5px 0;
+}
+
+.card svg {
+    float: right;
+    margin: 20px 0;
+}
+
+footer {
+    margin: 5px 80px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+footer a:link,
+footer a:visited {
+    text-decoration: none;
+    color: hsl(212, 86%, 64%);
+}
+
+footer a:hover,
+footer a:focus {
+    color: hsl(212, 86%, 34%);
+    border-bottom: 1px dotted hsl(212, 86%, 34%);
+}
+
+
+
+
+@media screen and (min-width: 1000px) {
+    h1 { font-size: 2.5rem; }
+    header { padding: 25px; }
+    header p { font-size: 1rem; }
+
+    .cardsWrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .cardColumn {
+        padding: 15px;
+        width: 33.3333333%;
+    }
+}
