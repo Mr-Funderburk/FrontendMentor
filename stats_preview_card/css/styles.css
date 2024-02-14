@@ -1,0 +1,98 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body {
+    background-color: hsl(233, 47%, 7%);
+    font-size: 15px;
+    color: hsl(0, 0%, 100%);
+}
+
+.wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 25px;
+    margin-top: 60px;
+    background-color: hsl(244, 38%, 16%);
+}
+
+.mainImage {
+    background-image: url("../images/image-header-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 255px;
+}
+
+.mainImage .shade {
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 64%, 25%, 75%);
+}
+
+main {
+    padding: 20px;
+    padding-top: 40px;
+}
+
+h1 {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 25px;
+}
+
+h1 span { color: hsl(277, 64%, 61%); }
+
+main p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    text-align: center;
+}
+
+.stats {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.stat {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    line-height: 1.7rem;
+    margin-bottom: 30px;
+}
+
+.stat span {
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+footer {
+    font-size: 9pt;
+    font-family: 'Lexend Deca', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    color: #999;
+}
+footer a:link,
+footer a:visited {
+    color: hsl(277, 64%, 61%);
+    text-decoration: none;
+}
+footer a:hover,
+footer a:focus {
+    color: hsl(277, 64%, 81%);
+    border-bottom: 1px dotted hsl(277, 64%, 81%);
+}
+
+
+@media screen and (min-width: 800) {
+    .mainImage { float: right; }
+}
