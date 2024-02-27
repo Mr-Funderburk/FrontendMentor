@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@300;900&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Social Links Profile | By Stephen Funderburk</title>
+
+  <style>
+    * { margin: 0; padding: 0; }
+
+    body {
+      background-color: hsl(0, 0%, 8%);
+      font-size: 14px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      width: 375px;
+      text-align: center;
+      background-color: hsl(0, 0%, 12%);
+      padding: 40px 20px;
+      border-radius: 16px;
+      padding-bottom: 20px;
+    }
+
+    .card .headshot {
+      width: 80px;
+      border-radius: 50%;
+    }
+
+    .card h1 {
+      font-size: 1.4rem;
+      font-family: Raleway, serif;
+      font-weight: 900;
+      letter-spacing: 0.1rem;
+      color: hsl(0, 0%, 100%);
+      margin: 18px 0 6px 0;
+    }
+    .card h1 span { font-size: 0.8em;}
+
+    .card h3 {
+      font-size: 1rem;
+      font-family: "Open Sans", serif;
+      font-weight: 600;
+      color: hsl(196, 100%, 41%);
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      font-family: Raleway, serif;
+      font-weight: 300;
+      color: hsl(0, 0%, 100%);
+      margin: 20px 0;
+    }
+
+    .card a:link, .card a:visited {
+      font-size: 1rem;
+      font-weight: 500;
+      font-family: "Open Sans", sans-serif;
+      color: hsl(0, 0%, 100%);
+      display: block;
+      background-color: hsl(0, 0%, 20%);
+      border-radius: 8px;
+      padding: 8px;
+      margin: 14px;
+      text-decoration: none;
+    }
+
+    .card a:active, .card a:hover, .card a:focus { 
+      background-color: hsl(196, 100%, 41%); 
+      color: hsl(0, 0%, 5%);
+      font-weight: 600;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      position: absolute;
+      bottom: 5px;
+      width: 100%; 
+      color: hsl(0, 0%, 80%);
+      text-align: center;
+    }
+
+    footer a:link,
+    footer a:visited {
+      text-decoration: none;
+      border-bottom: 1px dotted hsl(216, 95%, 58%);
+      color: hsl(216, 95%, 58%);
+    }
+
+    footer a:active { color: hsl(0, 90%, 40%); }
+
+    footer a:hover,
+    footer a:focus {
+      border-bottom: 1px solid hsl(218, 44%, 22%);
+      color: hsl(218, 44%, 22%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <img src="images/funderburk_headshot.png" alt="Stephen Funderburk" class="headshot">
+
+      <h1>Stephen <span>"Mr. Fun"</span> Funderburk</h1>
+      <h3>Florida, United States of America</h3>
+      <p class="tag">Passionate Educator, Caring Husband,<br>Loving Father, Avid Gamer.</p>
+
+      <a href="https://github.com/Mr-Funderburk" target="_blank">GitHub</a>
+      <a href="https://www.frontendmentor.io/profile/Mr-Funderburk" target="_blank">Frontend Mentor</a>
+      <a href="https://www.linkedin.com/in/stephen-funderburk" target="_blank">LinkedIn</a>
+      <a href="https://steamcommunity.com/id/Dekaiden" target="_blank">Steam</a>
+      <a href="https://scratch.mit.edu/users/stephengf/" target="_blank">Scratch</a>
+    </div>
+  </div>
+
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mr. Funderburk</a>.
+  </footer>
+</body>
+</html>
