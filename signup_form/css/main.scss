@@ -1,0 +1,178 @@
+// variables
+$color_red: hsl(0, 100%, 74%);
+$color_green: hsl(154, 59%, 51%);
+$color_blue: hsl(248, 32%, 49%);
+$color_darkBlue: hsl(249, 10%, 26%);
+$color_grayBlue: hsl(246, 25%, 77%);
+$font_body: "Poppins", sans-serif;
+
+// reset
+* { margin: 0; padding: 0; border: 0; font-size: 100%; font-family: $font_body; text-decoration: none; }
+*, *:before, *:after { box-sizing: border-box; }
+a:hover, a:focus, div, input:focus { outline: none !important; }
+input { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+body {
+    background-color: $color_red;
+    background-image: url("../images/bg-intro-mobile.png");
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    div {
+        margin: 30px 24px;
+        text-align: center;
+
+        &:first-of-type { margin-top: 90px; }
+
+        p {
+            color: #fff;
+            line-height: 1.6em;
+        }
+    }
+
+    form { 
+        background-color: #fff;
+        margin: 20px 0;
+        padding: 5px 22px;
+        border-radius: 12px;
+
+        input {
+            //position: relative;
+            display: block;
+            width: 100%; 
+            border: 1px solid hsla(246, 25%, 77%, 0.6);
+            border-radius: 6px;
+            font-weight: 600;
+            padding: 14px 18px;
+            margin: 16px 0;
+            z-index: 100;
+
+            &:focus { border-color: $color_darkBlue; }
+        }
+
+        .btn {
+            background-color: $color_green;
+            text-transform: uppercase;
+            padding: 14px;
+            display: block;
+            width: 100%;
+            border-radius: 6px;
+            box-shadow: inset 0 -4px 0 0 hsla(154, 59%, 31%, .4);
+            border: 1px solid hsla(154, 59%, 31%, .4);
+
+            &:hover, &:focus { 
+                background-color: hsl(154, 59%, 71%); 
+                box-shadow: inset 0 -4px 0 0 hsla(154, 59%, 31%, .2);
+                border: 1px solid hsla(154, 59%, 31%, .2);
+            }
+        }
+    }
+}
+
+h1 {
+    color: #fff;
+    font-size: 1.75em;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+}
+
+.btn, a.btn:link, a.btn:visited, a.btn:active {
+    display: block;
+    border-radius: 12px;
+    padding: 18px 60px;
+    color: #fff;
+    background-color: $color_blue;
+    line-height: 1.7em;
+    font-weight: normal;
+    cursor: pointer;
+
+    &:hover, &:focus { background-color: hsl(248, 32%, 59%); }
+}
+
+.tryIt {
+    cursor: default !important;
+    margin: 0 !important; 
+    width: 100% !important; 
+    display: block !important; 
+    text-align: center !important;
+
+    &:hover, &:focus { background-color: $color_blue !important; }
+}
+
+.shadow { box-shadow: 0 8px 0 0 hsla(249, 10%, 26%, 0.3); }
+.note { 
+    margin: 20px 0;
+    color: $color_grayBlue; 
+    font-size: 0.8em; 
+    line-height: 1.8em;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: $color_red;
+    font-weight: 700;
+}
+
+a:hover, a:focus { color:hsl(0, 100%, 44%); }
+
+footer {
+    text-align: center;
+    margin-bottom: 20px;
+    a:link, a:visited, a:active { color: $color_blue; }
+    a:hover, a:focus { color: $color_green; }
+}
+
+.errorMessage {
+    color: $color_red;
+    font-size: 0.8em;
+    font-style: italic;
+    display: block;
+    text-align: right;
+    margin-top: -10px;
+    display: none;
+}
+
+input.error {
+    border-width: 2px;
+    border-color: $color_red;
+    color: $color_red;
+    background-image: url("../images/icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+
+    &:focus { border-color: $color_red; }
+}
+
+@media screen and (min-width: 1000px) {
+    body { background-image: url("../images/bg-intro-desktop.png"); }
+
+    main {
+        flex-direction: row;
+        margin: 60px;
+
+        div {
+            width: 50%;
+            margin: 30px 60px;
+
+            &:first-of-type {
+                text-align: left;
+                margin: 30px 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 3em;
+        line-height: 1.2em;
+        margin-bottom: 20px;
+    }
+}

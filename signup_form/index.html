@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/main.css">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+<body>
+
+  <main>
+    <div>
+      <h1>Learn to code by watching others</h1>
+
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+    </div>
+
+    <div>
+      <div class="btn tryIt shadow"><strong>Try it free 7 days</strong> then $20/mo. thereafter</div>
+
+      <form class="shadow">
+        <input type="text" id="txtFirstName" name="txtFirstName" placeholder="First Name">
+        <span class="errorMessage">First Name cannot be empty</span>
+
+        <input type="text" id="txtLastName" name="txtLastName" placeholder="Last Name">
+        <span class="errorMessage">Last Name cannot be empty</span>
+
+        <input type="email" id="txtEmail" name="txtEmail" placeholder="Email Address">
+        <span class="errorMessage"></span>
+
+        <input type="password" id="txtPassword" name="txtPassword" placeholder="Password">
+        <span class="errorMessage" style="margin-bottom: 10px;">Password cannot be empty</span>
+      
+        <button class="btn" id="btnSubmit">Claim your free trial</button>
+      
+        <p class="note">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+      </form>
+    </div>
+  </main>
+  
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Mr-Funderburk" target="_blank">Stephen Funderburk</a>.
+  </footer>
+
+  <script>
+    const submit = document.getElementById("btnSubmit");  // var to keep track of the submit button
+    
+    submit.addEventListener("click", function(e){  // have the browswer "listen" for an on click event
+      e.preventDefault();  // stop the browser from doing it's default action(s)
+
+      // first name
+      let firstName = document.getElementById("txtFirstName");  // var to keep track of the first name input
+      let firstNameError = firstName.nextElementSibling;  // var to keep track of the first name error
+
+      firstName.classList.remove("error");
+      firstNameError.style.display = "none";  // hide the first name error
+      if (firstName.value == "") {  // if there's no value for the first name input...
+        firstName.className = "error";  // add the class "error" to the first name input
+        firstNameError.style.display = "block";  // change the display style of the error to block
+      }
+
+
+      // last name
+      let lastName = document.getElementById("txtLastName");  // var to keep track of the first name input
+      let lastNameError = lastName.nextElementSibling;  // var to keep track of the first name error
+
+      lastName.classList.remove("error");
+      lastNameError.style.display = "none";  // hide the first name error
+      if (lastName.value == "") {  // if there's no value for the first name input...
+        lastName.className = "error";  // add the class "error" to the first name input
+        lastNameError.style.display = "block";  // change the display style of the error to block
+      }
+
+
+      // email
+      let email = document.getElementById("txtEmail");
+      let emailError = email.nextElementSibling;
+      const regex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+
+      email.classList.remove("error");
+      emailError.style.display = "none";
+      if (email.value == "") {
+        emailError.innerHTML = "Email cannot be empty";
+        email.className = "error";
+        emailError.style.display = "block";
+      } else if (!regex.test(email.value)) {
+        emailError.innerHTML = "Looks like this is not an email";
+        email.className = "error";
+        emailError.style.display = "block";
+      }
+
+
+      // password
+      let password = document.getElementById("txtPassword");  // var to keep track of the first name input
+      let passwordError = password.nextElementSibling;  // var to keep track of the first name error
+
+      password.classList.remove("error");
+      passwordError.style.display = "none";  // hide the first name error
+      if (password.value == "") {  // if there's no value for the first name input...
+        password.className = "error";  // add the class "error" to the first name input
+        passwordError.style.display = "block";  // change the display style of the error to block
+      }
+    });
+  </script>
+</body>
+</html>

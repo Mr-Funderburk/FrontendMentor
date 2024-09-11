@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * { margin: 0; padding: 0; }
+        body {}
+
+        main {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            height: 360px;
+            margin: 18px 100px;
+        }
+
+        main .card {
+            position: relative;
+            flex: 1;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: flex 0.35s ease-in-out;
+        }
+
+        main .card span {
+            display: block;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        main .card img {
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            transition: 0.35s ease;
+        }
+
+        main .card:hover { flex: 2.25; }
+        main:has(.card:hover) .card:not(:hover) img {
+            filter: grayscale(100%);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+
+    <main>
+        <div class="card">
+            <a href="3_column_card/index.html">
+                <img src="3_column_card/display/desktop-preview.jpg" alt="3 column card challenge">
+                <span>3 Column Card</span>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="four_card_feature/index.html">
+                <img src="four_card_feature/design/desktop-preview.jpg" alt="four card feature challenge">
+                <span>Four Card Feature</span>
+            </a>
+        </div>
+        
+        <div class="card">
+            <a href="nft_preview_card/index.html">
+                <img src="nft_preview_card/design/desktop-preview.jpg" alt="NFT Preview Card challenge">
+                <span>NFT Preview Card</span>
+            </a>
+        </div>
+        
+        <div class="card">
+            <a href="product_card/index.html">
+                <img src="product_card/design/desktop-preview.jpg" alt="Product Card challenge">
+                <span>Product Card</span>
+            </a>
+        </div>
+        
+        <div class="card">
+            <a href="profile_card/index.html">
+                <img src="profile_card/design/desktop-preview.jpg" alt="Profile Card challenge">
+                <span>Profile Card</span>
+            </a>
+        </div>
+    </main>
+
+    <main>
+        <div class="card">
+            <a href="qr_code/index.html">
+                <img src="qr_code/design/desktop-preview.jpg" alt="QR Code challenge">
+                <span>QR Code</span>
+            </a>
+        </div>
+        
+        <div class="card">
+            <a href="recipe_page/index.html">
+                <img src="recipe_page/design/desktop-preview.jpg" alt="Recipe Page challenge">
+                <span>Recipe Page</span>
+            </a>
+        </div>
+        
+        <div class="card">
+            <a href="results_summary/index.html">
+                <img src="results_summary/design/desktop-preview.jpg" alt="Results Summary challenge">
+                <span>Results Summary</span>
+            </a>
+        </div>
+        
+        <div class="card">
+            <a href="single_price/index.html">
+                <img src="single_price/design/desktop-preview.jpg" alt="Single Price challenge">
+                <span>Single Price</span>
+            </a>
+        </div>
+        
+        <div class="card">
+            <a href="social_links_profile/index.html">
+                <img src="social_links_profile/design/desktop-preview.jpg" alt="Social Links Profile challenge">
+                <span>Social Links Profile</span>
+            </a>
+        </div>
+        
+        <div class="card">
+            <a href="stats_preview_card/index.html">
+                <img src="stats_preview_card/design/desktop-preview.jpg" alt="Stats Preview Card challenge">
+                <span>Stats Preview Card</span>
+            </a>
+        </div>
+        
+        <div class="card">
+            <a href="signup_form/index.html">
+                <img src="signup_form/design/desktop-preview.jpg" alt="Sign Up Form challenge">
+                <span>Sign Up Form</span>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
