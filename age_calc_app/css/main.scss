@@ -1,0 +1,160 @@
+$color_purple: hsl(259, 100%, 65%);
+$color_lightRed: hsl(0, 100%, 67%);
+$color_white: hsl(0, 0%, 100%);
+$color_offWhite: hsl(0, 0%, 94%);
+$color_lightGrey: hsl(0, 0%, 86%);
+$color_smokeyGrey: hsl(0, 1%, 44%);
+$color_offBlack: hsl(0, 0%, 8%);
+
+* { margin: 0; padding: 0; box-sizing: border-box; outline: none; font-family: "Poppins", Arial, Helvetica, sans-serif; }
+
+body {
+    font-size: 16px;
+    background-color: $color_offWhite;
+}
+
+.container {
+    width: 90%;
+    background-color: $color_white;
+    border-radius: 20px;
+    border-bottom-right-radius: 80px;
+    margin: 0 auto;
+    margin-top: 20%;
+    padding: 40px 20px;
+
+    .dateInput {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+
+        label {
+            font-size: 0.8em;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: $color_smokeyGrey;
+        }
+
+        input[type=text] {
+            width: 100%;
+            padding: 6px 12px;
+            font-size: 1.2em;
+            font-weight: 700;
+            border: 1px solid $color_lightGrey;
+            border-radius: 8px;
+            color: $color_offBlack;
+
+            &:hover, &:focus { border-color: $color_purple; }
+        }
+    }
+
+    .btnContainer { 
+        position: relative;
+        margin: 30px 0;
+
+        #line {
+            display: block;
+            width: 100%;
+            background-color: $color_lightGrey;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 1;
+        }
+    
+        #btnCalc {
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $color_purple;
+            background-image: url("../assets/images/icon-arrow.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+            z-index: 2;
+            margin: 0 auto;
+            transition: background-color 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover, &:focus { background-color: $color_offBlack; }
+        }
+    }
+
+    .timeSince {
+        font-size: 3.2em;
+        font-style: italic;
+        font-weight: 800;
+        letter-spacing: -1px;
+        line-height: 1.2em;
+
+        span { color: $color_purple; }
+    }
+
+    footer {
+        font-size: 0.7em;
+        text-align: center;
+        position: relative;
+        top: 100px;
+
+        a:link, a:visited, a:active {
+            color: $color_purple;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover, a:focus { color: $color_lightRed; }
+    }
+}
+
+.error {
+    color: $color_lightRed !important;
+    border-color: $color_lightRed !important;
+}
+
+.errorMessage {
+    font-size: 0.5em;
+    font-style: italic;
+    font-weight: 400;
+    display: none;
+    margin-top: 8px;
+}
+
+
+@media screen and (min-width: 840px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .container { 
+        width: 840px; 
+        margin-top: 0; 
+        padding: 40px;
+
+        .dateInput { width: 80%; }
+
+        .btnContainer {
+            width: 90%;
+            
+            #btnCalc {
+                width: 70px;
+                height: 70px;
+                margin-left: 100%;
+            }
+        }
+    
+        .timeSince {
+            font-size: 6em;
+        }
+    }
+
+    .errorMessage {
+        font-size: 0.8em;
+    }
+}
