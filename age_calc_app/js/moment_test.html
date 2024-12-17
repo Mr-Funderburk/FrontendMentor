@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>current: <span id="now"></span></div>
+    <div>target: <span id="target">2000-01-10</span></div>
+    <div id="difference"></div>
+
+    <script type="text/javascript" src="moment.js"></script>
+    <script>
+        let now = moment();
+        // let target = moment(document.getElementById("target").innerText);
+        let target = moment([2000, 1, 12]);
+        
+        document.getElementById("now").innerText = now.format("L");
+
+        let diff = moment.duration(now.diff(target));
+
+        console.log(diff.months());
+
+        console.log(moment.isMoment(now));
+    </script>
+</body>
+</html>

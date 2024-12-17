@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tipCalc.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1>SPLI<br>TTER</h1>
+
+    <div class="app">
+      <div class="fields">
+        <div>
+          <label for="txtBill">Bill</label>
+          <input type="text" placeholder="0" name="txtBill" id="txtBill">
+        </div>
+
+        <div>
+          <label>Select Tip %</label>
+          <div class="grid">
+            <div>
+              <input type="radio" name="percent" id="rb5">
+              <label for="rb5" onclick="updatePercent(5)">5%</label>
+            </div>
+            
+            <div>
+              <input type="radio" name="percent" id="rb10">
+              <label for="rb10" onclick="updatePercent(10)">10%</label>
+            </div>
+            
+            <div>
+              <input type="radio" name="percent" id="rb15">
+              <label for="rb15" onclick="updatePercent(15)">15%</label>
+            </div>
+            
+            <div>
+              <input type="radio" name="percent" id="rb25">
+              <label for="rb25" onclick="updatePercent(25)">25%</label>
+            </div>
+            
+            <div>
+              <input type="radio" name="percent" id="rb50">
+              <label for="rb50" onclick="updatePercent(50)">50%</label>
+            </div>
+
+            <div>
+              <input type="radio" name="percent" id="rbCustom">
+              <input type="number" placeholder="Custom" name="txtCustom" id="txtCustom" min="0">
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label for="txtPeople">Number of People</label>
+          <input type="number" placeholder="0" name="txtPeople" id="txtPeople" min="0">
+        </div>
+      </div>
+
+      <div class="results">
+        <div>
+          <div><p>Tip Amount<span>/ person</span></p></div>
+          <div id="tipAmountPerson">$0.00</div>
+        </div>
+
+        <div>
+          <div><p>Total<span>/ person</span></p></div>
+          <div id="totalAmountPerson">$0.00</div>
+        </div>
+
+        <div>
+          <a href="#" id="btnReset">Reset</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    <br>Coded by <a href="https://github.com/Mr-Funderburk" target="_blank">Stephen Funderburk</a>.
+  </footer>
+
+  <script src="js/tipCalc.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+// poor man's reset
+* { 
+    margin: 0; 
+    padding: 0; 
+    font-family: "Barlow Semi Condensed", sans-serif; 
+    font-weight: 600; 
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+// variables
+$scissorsGradient1: hsl(39, 89%, 49%);
+$scissorsGradient2: hsl(40, 84%, 53%);
+$paperGradient1: hsl(230, 89%, 62%);
+$paperGradient2: hsl(230, 89%, 65%);
+$rockGradient1: hsl(349, 71%, 52%);
+$rockGradient2: hsl(349, 70%, 56%);
+$lizardGradient1: hsl(261, 73%, 60%);
+$lizardGradient2: hsl(261, 72%, 63%);
+$spockGradient1: hsl(189, 59%, 53%);
+$spockGradient2: hsl(189, 58%, 57%);
+
+$darkText: hsl(229, 25%, 31%);
+$scoreText: hsl(229, 64%, 46%);
+$headerOutline: hsl(217, 16%, 45%);
+
+
+
+body {
+    background-image: radial-gradient(circle at center, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    font-size: 12px;
+}
+
+header {
+    width: 705px;
+    margin: 30px auto;
+    padding: 15px 25px;
+    border: 3px solid $headerOutline;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+
+    .scoreContainer {
+        background: #fff;
+        color: $scoreText;
+        letter-spacing: 2px;
+        padding: 12px;
+        width: 145px;
+        text-align: center;
+        border-radius: 14px;
+        font-size: 1.4em;
+
+        #score {
+            color: $darkText;
+            font-size: 3.8em;
+            font-weight: 700;
+        }
+    }
+}
+
+#btnRules {
+    font-size: 1.3em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #eee;
+    letter-spacing: 2px;
+    display: block;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-weight: 600;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px 32px;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:hover {
+        color: $rockGradient1;
+        border-color: $rockGradient1;
+    }
+}
+
+main, aside {
+    width: 700px;
+    height: 600px;
+    margin: 20px auto;
+    background-image: url("../images/bg-pentagon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    position: relative;
+
+    .rpsButton {
+        display: block;
+        width: 150px;
+        height: 150px;
+        border: 16px solid $scissorsGradient1;
+        border-radius: 50%;
+        background-color: #fff;
+        background-image: url("../images/icon-scissors.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        box-shadow: inset 0 6px 0 hsla(0, 0, 0, 0.16), 0 6px 0 darken($scissorsGradient2, 15);
+        position: absolute;
+        transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .btnScissors { 
+        top: 5%; 
+        left: calc(50% - 75px);
+        
+        &:hover {
+            border-color: lighten($scissorsGradient1, 20);
+            box-shadow: inset 0 6px 0 hsla(0, 0, 0, 0.16), 0 6px 0 darken($scissorsGradient2, 5);
+        }
+    }
+
+    .btnSpock { 
+        top: calc(42% - 75px); 
+        left: 10%; 
+        border-color: $spockGradient1; 
+        box-shadow: inset 0 6px 0 hsla(0, 0, 0, 0.16), 0 6px 0 darken($spockGradient2, 15); 
+        background-image: url("../images/icon-spock.svg"); 
+        
+        &:hover {
+            border-color: lighten($spockGradient1, 20);
+            box-shadow: inset 0 6px 0 hsla(0, 0, 0, 0.16), 0 6px 0 darken($spockGradient2, 5); 
+        }
+    }
+
+    .btnPaper { 
+        top: calc(42% - 75px); 
+        right: 10%; 
+        border-color: $paperGradient1; 
+        box-shadow: inset 0 6px 0 hsla(0, 0, 0, 0.16), 0 6px 0 darken($paperGradient2, 15); 
+        background-image: url("../images/icon-paper.svg"); 
+        
+        &:hover {
+            border-color: lighten($paperGradient1, 20);
+            box-shadow: inset 0 6px 0 hsla(0, 0, 0, 0.16), 0 6px 0 darken($paperGradient1, 5);
+        }
+    }
+
+    .btnLizard { 
+        top: 68%; 
+        left: 22%; 
+        border-color: $lizardGradient1; 
+        box-shadow: inset 0 6px 0 hsla(0, 0, 0, 0.16), 0 6px 0 darken($lizardGradient2, 15); 
+        background-image: url("../images/icon-lizard.svg"); 
+        
+        &:hover {
+            border-color: lighten($lizardGradient1, 20);
+            box-shadow: inset 0 6px 0 hsla(0, 0, 0, 0.16), 0 6px 0 darken($lizardGradient1, 5);
+        }
+    }
+
+    .btnRock { 
+        top: 68%; 
+        right: 22%; 
+        border-color: $rockGradient1; 
+        box-shadow: inset 0 6px 0 hsla(0, 0, 0, 0.16), 0 6px 0 darken($rockGradient2, 15); 
+        background-image: url("../images/icon-rock.svg"); 
+        
+        &:hover {
+            border-color: lighten($rockGradient1, 20);
+            box-shadow: inset 0 6px 0 hsla(0, 0, 0, 0.16), 0 6px 0 darken($rockGradient1, 5);
+        }
+    }
+}
+
+aside {
+    background-image: none;
+    display: flex;
+    display: none;
+    justify-content: space-between;
+    width: 900px;
+
+    div { width: 300px; }
+
+    h2 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.9em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .rpsButton { 
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        width: 300px;
+        height: 300px;
+        border-width: 32px;
+    }
+
+    .winner::before {
+        content: "";
+        position: absolute;
+        top: -32px; left: -32px;
+        z-index: -10;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        box-shadow: 
+            0 0 0 60px hsla(214, 47%, 23%, 0.6),
+            0 0 0 130px hsla(214, 47%, 23%, 0.4),
+            0 0 0 200px hsla(214, 47%, 23%, 0.2);
+    }
+
+    #housePicked {
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    .noHousePick {
+        width: 236px;
+        height: 236px;
+        background-color: rgba(0, 0, 0, 0.1);
+        position: relative;
+        top: 32px;
+    }
+
+    #win {
+        text-align: center;
+        position: relative;
+        z-index: 100;
+        padding-top: 150px;
+        display: none;
+
+        span {
+            color: #fff;
+            font-size: 4em;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        #playAgainButton {
+            display: block;
+            padding: 12px;
+            background-color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 8px;
+            font-size: 1.6em;
+            letter-spacing: 1px;
+            color: $headerOutline;
+            width: 200px;
+            margin: 10px auto;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: $lizardGradient1;
+            }
+        }
+    }
+}
+
+footer {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+    padding-left: 30px;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+
+    a:link, a:active, a:visited {
+        color: $spockGradient1;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+
+    a:hover {
+        color: lighten($spockGradient1, 30);
+    }
+}
+
+// modal
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+#modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+
+    #modal {
+        background-color: #fff;
+        padding: 10px 30px 40px 30px;
+        border-radius: 8px;
+        position: relative;
+
+        h2 {
+            font-size: 2.7em;
+            font-weight: 700;
+            padding: 15px 0;
+        }
+
+        #closeModal {
+            position: absolute;
+            top: 30px;
+            right: 45px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            padding: 10px;
+    
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                height: 3px;
+                background-color: #ccc;
+                transition: background-color 0.3s ease-in-out;
+            }
+    
+            &::before { transform: rotate(45deg); }
+            &::after { transform: rotate(-45deg); }
+
+            &:hover::before,
+            &:hover::after {
+                background-color: #000;
+            }
+        }
+    }
+}
